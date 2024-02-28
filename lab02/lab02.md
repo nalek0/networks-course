@@ -35,7 +35,7 @@
    - `GET /product/{product_id}`
    - Схема ответа: `<product-json>`
 3. Обновить существующий продукт (обновляются только те поля продукта, которые были переданы в теле запроса)
-   - `PUT /product/{product_id}`
+   - `GET /product/{product_id}`
    - Схема запроса: `<product-json>` (некоторые поля могут быть опущены)
    - Схема ответа: `<product-json>` (обновлённый продукт)
 4. Удалить продукт по его id
@@ -62,7 +62,28 @@
 запросы и ответы со стороны сервиса для **всех** его операций.
 
 #### Демонстрация работы
-todo
+
+`POST /product`:
+
+![Request 1 Picture 1](./task2/Request1Picture1.png "Request 1 Picture 1")
+![Request 1 Picture 2](./task2/Request1Picture2.png "Request 1 Picture 2")
+
+`GET /product/{product_id}`:
+
+![Request 2](./task2/Request2.png "Request 2")
+
+`GET /product/{product_id}`:
+
+![Request 3](./task2/Request3.png "Request 3")
+
+`DELETE /product/{product_id}`:
+
+![Request 4 Picture 1](./task2/Request4Picture1.png "Request 4 Picture 1")
+![Request 4 Picture 2](./task2/Request4Picture2.png "Request 4 Picture 2")
+
+`GET /products`:
+
+![Request 5](./task2/Request5.png "Request 5")
 
 ### Задание В (4 балла)
 Пусть ваш продукт также имеет иконку (небольшую картинку). Формат иконки (картинки) может
@@ -84,7 +105,21 @@ todo
 ```
 
 #### Демонстрация работы
-todo
+
+*Перед демонстрацией было создано два продукта*
+
+Посылаем запрос на изменение иконки: 
+
+![Image POST](./task3/image_post.png "Image POST")
+
+После этого можно видеть, что и Postman на GET запросе возвращает картинку, так и в хроме она выдается:
+
+![Image GET](./task3/image_get.png "Image GET")
+![Chrome Image](./task3/chrome_image.png "Chrome Image")
+
+И при этом данные продукта тоже обновляются:
+
+![Product data](./task3/product_data.png "Product data")
 
 ---
 
